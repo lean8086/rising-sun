@@ -1,0 +1,69 @@
+@keyframes rotate {
+    to { transform: rotate(360deg) }
+}
+
+body {
+    max-width: 600px; /* In this case, keep the 2:3 flag ratio (Wikipedia) */
+}
+
+/**
+ * Container
+ */
+#stripes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 2000px; /* stripes size * 2 */
+    height: 2000px; /* stripes size * 2 */
+    left: -775px;
+    top: -800px; /* (stripes size - section height) / 2 */
+    transform: translateZ(0); /* Enable hardware acceleration */
+    animation: rotate 100s linear infinite;
+}
+
+/**
+ * Sun
+ */
+#stripes::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    background-color: #be0026;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px; /* width / 2 */
+    margin-top: -100px; /* height / 2 */
+}
+
+/**
+ * A stripe
+ */
+#stripes li {
+    width: 0;
+    height: 0;
+    border: 110px solid transparent; /* Stripe width */
+    border-top: 1000px solid #be0026; /* Stripe height and color */
+    border-bottom-width: 0;
+    transform-origin: center bottom;
+    position: absolute;
+    left: 890px; /* border-top-width - border-(left or right)-width */
+}
+
+#stripes li:nth-child(2) { transform: rotate(22.5deg) }
+#stripes li:nth-child(3) { transform: rotate(45deg) }
+#stripes li:nth-child(4) { transform: rotate(67.5deg) }
+#stripes li:nth-child(5) { transform: rotate(90deg) }
+#stripes li:nth-child(6) { transform: rotate(112.5deg) }
+#stripes li:nth-child(7) { transform: rotate(135deg) }
+#stripes li:nth-child(8) { transform: rotate(157.5deg) }
+#stripes li:nth-child(9) { transform: rotate(180deg) }
+#stripes li:nth-child(10) { transform: rotate(202.5deg) }
+#stripes li:nth-child(11) { transform: rotate(225deg) }
+#stripes li:nth-child(12) { transform: rotate(247.5deg) }
+#stripes li:nth-child(13) { transform: rotate(270deg) }
+#stripes li:nth-child(14) { transform: rotate(292.5deg) }
+#stripes li:nth-child(15) { transform: rotate(315deg) }
+#stripes li:nth-child(16) { transform: rotate(337.5deg) }
