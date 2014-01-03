@@ -16,7 +16,7 @@ body {
     position: absolute;
     width: 1000px; /* stripe height * 2 */
     height: 1000px; /* stripe height * 2 */
-    left: -300px;
+    left: -265px;
     top: -300px; /* ((stripe height * 2) - section height) / 2 */
     transform: translateZ(0); /* Enable hardware acceleration */
     animation: rotate 100s linear infinite;
