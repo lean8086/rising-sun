@@ -14,10 +14,10 @@ body {
     margin: 0;
     padding: 0;
     position: absolute;
-    width: 2000px; /* stripes size * 2 */
-    height: 2000px; /* stripes size * 2 */
-    left: -775px;
-    top: -800px; /* (stripes size - section height) / 2 */
+    width: 1000px; /* stripe height * 2 */
+    height: 1000px; /* stripe height * 2 */
+    left: -300px;
+    top: -300px; /* ((stripe height * 2) - section height) / 2 */
     transform: translateZ(0); /* Enable hardware acceleration */
     animation: rotate 100s linear infinite;
 }
@@ -44,12 +44,12 @@ body {
 #stripes li {
     width: 0;
     height: 0;
-    border: 110px solid transparent; /* Stripe width */
-    border-top: 1000px solid #be0026; /* Stripe height and color */
+    border: 55px solid transparent; /* Stripe width */
+    border-top: 500px solid #be0026; /* Stripe height and color */
     border-bottom-width: 0;
     transform-origin: center bottom;
     position: absolute;
-    left: 890px; /* border-top-width - border-(left or right)-width */
+    left: 445px; /* stripe height - stripe width */
 }
 
 #stripes li:nth-child(2) { transform: rotate(22.5deg) }
